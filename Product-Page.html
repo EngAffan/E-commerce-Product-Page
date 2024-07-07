@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Product Page</title>
+    
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>T-SHIRT</h2>
+        <div class="product-input">
+            <p>Home</p>
+            <p>Products</p>
+            <div class="cart-icon" onmouseover="showCartPopup()" onmouseout="hideCartPopup()">
+                <i class="fas fa-cart-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+                <div class="cart-popup" id="cartPopup">
+                    <div id="cartItems"></div>
+                    <div>Total: $<span id="totalPrice">0.00</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="image-gallery">
+            <div class="main-image">
+                <img id="currentImage" src="first.png" alt="Product Image">
+            </div>
+            <div class="thumbnail-images">
+                <img src="first.png" alt="Thumbnail 1" onclick="switchImage('first.png', 'Shark')">
+                <img src="second.png" alt="Thumbnail 2" onclick="switchImage('second.png', 'WreathGreen')">
+                <img src="third.png" alt="Thumbnail 3" onclick="switchImage('third.png', 'Peach')">
+                <img src="fourth.png" alt="Thumbnail 4" onclick="switchImage('fourth.png', 'PangeaBlue')">
+                <img src="fifth.png" alt="Thumbnail 5" onclick="switchImage('fifth.png', 'UnionBlue')">
+            </div>
+        </div>
+        <div class="product-details">
+            <h3> Home/Summer Breathables</h1>
+            <h1>Summer Breathables </h1>
+            <p class="price" id="productPrice">$99.99</p>
+            <label><b>Size:</b></label>
+            <div class="size-buttons">
+                <button class="size-btn" onclick="selectSize('small')"><span><b>S</b></span></button>
+                <button class="size-btn" onclick="selectSize('medium')"><span><b>M</b></span></button>
+                <button class="size-btn" onclick="selectSize('large')"><span><b>L</b></span></button>
+            </div>
+            <label><b>Color:</b></label>
+            <div class="color-buttons">
+                <button class="color-btn" data-color="Shark" onclick="selectColor('Shark')"></button>
+                <button class="color-btn" data-color="WreathGreen" onclick="selectColor('WreathGreen')"></button>
+                <button class="color-btn" data-color="Peach" onclick="selectColor('Peach')"></button>
+                <button class="color-btn" data-color="PangeaBlue" onclick="selectColor('PangeaBlue')"></button>
+                <button class="color-btn" data-color="UnionBlue" onclick="selectColor('UnionBlue')"></button>
+            </div>
+            <p class="description">
+              Versatile T-shirt crafted from high-quality cotton fabric, ensuring maximum comfort and breathability. Its classic design makes it an essential piece in any wardrobe, suitable for casual outings, gym sessions, or lounging at home. The T-shirt 
+              <br> <br> <br>
+              <b>Features:</b><br> <br>
+              <ul>
+                <li>Fabric: 100% soft, breathable cotton </li>
+                <li>Fit: Regular fit, providing a comfortable and relaxed feel</li>
+                <li>Neckline: Crew neck for a timeless look</li>
+                <li>Sleeves: Short sleeves for easy movement</li>
+                <li>Sleeves: Short sleeves for easy movement</li>
+                <li>Care Instructions: Machine washable, tumble dry low</li>
+            </ul>
+                   <br>  <br> 
+                Available in multiple colors and sizes, this T-shirt is designed to suit any style preference.</p>
+            <div class="cart" onclick="addToCart()">
+                <button class="CartBtn">
+                    <span class="IconContainer"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                    </span>
+                    <p class="text">Add to Cart</p>
+                  </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
